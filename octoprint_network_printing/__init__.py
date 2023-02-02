@@ -40,7 +40,7 @@ class NetworkPrintingPlugin(
         serial_port_args = {
             "baudrate": baudrate,
             "timeout": timeout_s,
-            "write_timeout": 10,
+            "write_timeout": 0,
         }
 
         serial_obj = serial.serial_for_url(str(port), **serial_port_args)
@@ -58,7 +58,7 @@ class NetworkPrintingPlugin(
                 repo="OctoPrint-Network-Printing",
                 current=self._plugin_version,
                 # update method: pip
-                pip="https://github.com/prfiredragon/OctoPrint-Network-Printing/archive/{target_version}.zip",
+                pip="https://github.com/prfiredragon/OctoPrint-Network-Printing/archive/refs/tags/{target_version}.zip",
             )
         )
 
