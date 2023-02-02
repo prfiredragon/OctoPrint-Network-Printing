@@ -40,7 +40,7 @@ class NetworkPrintingPlugin(
         serial_port_args = {
             "baudrate": baudrate,
             "timeout": timeout_s,
-            "write_timeout": 0,
+            "write_timeout": 10,
         }
 
         serial_obj = serial.serial_for_url(str(port), **serial_port_args)
